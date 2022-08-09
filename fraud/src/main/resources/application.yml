@@ -1,0 +1,34 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: fraud
+  profiles:
+    active: default
+  datasource:
+    username: 'sa'
+    url: jdbc:postgresql://localhost:5432/fraud
+    password: 'password'
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+#     uri: http://localhost:8888
+#     profile: uat
+      label: main
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+# default:false, register OS hostname to eureka server
+#  instance:
+#    prefer-ip-address: true

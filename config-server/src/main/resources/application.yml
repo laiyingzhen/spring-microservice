@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          defaultLabel: main
+          basedir: file:///${user.home}/config-repo
+          uri: https://github.com/laiyingzhen/config-server
+          search-paths: {application}
+server:
+  port: 8888
+
