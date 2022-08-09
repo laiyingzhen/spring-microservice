@@ -1,6 +1,11 @@
 spring:
   application:
     name: config-server
+# spring security basic auth, please don't put password like this
+  security:
+    user:
+      name: guest
+      password: guest
   cloud:
     config:
       server:
@@ -8,7 +13,7 @@ spring:
           defaultLabel: main
           basedir: file:///${user.home}/config-repo
           uri: https://github.com/laiyingzhen/config-server
-          search-paths: {application}
+          search-paths: customer,fraud
 server:
   port: 8888
 

@@ -25,6 +25,8 @@ spring:
 #      uri: http://localhost:8888
 #      profile: uat
       label: main
+      username: guest
+      password: guest
   rabbitmq:
     host: localhost
     port: 5672
