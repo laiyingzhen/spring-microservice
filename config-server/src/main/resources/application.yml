@@ -14,6 +14,12 @@ spring:
           basedir: file:///${user.home}/config-repo
           uri: https://github.com/laiyingzhen/config-server
           search-paths: customer,fraud
+# disable auto decryption
+        encrypt:
+          enabled: false
 server:
   port: 8888
+# Symmetric encryption for the properties content
+encrypt:
+  key: SpringcLoudmiCroserViceprojeCt
 

@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {
     @Value("${profile}")
     private String profileData;
+    @Value("${connectionstring}")
+    private String connectionString;
     @Autowired
     private CustomerService customerService;
 
@@ -29,5 +31,9 @@ public class CustomerController {
     public String getProfile(){
         return this.profileData;
         //return "test";
+    }
+    @GetMapping("/connectionstring")
+    public String getEncryptedPassword(){
+        return this.connectionString;
     }
 }

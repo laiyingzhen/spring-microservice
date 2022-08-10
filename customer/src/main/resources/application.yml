@@ -35,3 +35,6 @@ spring:
 # default:false, register OS hostname to eureka server
 #  instance:
 #    preferIpAddress: true
+# Symmetric encryption for the properties content
+encrypt:
+  key: SpringcLoudmiCroserViceprojeCt
