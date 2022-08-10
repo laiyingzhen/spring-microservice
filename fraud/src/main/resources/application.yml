@@ -26,11 +26,6 @@ spring:
       label: main
       username: guest
       password: guest
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
 # default:false, register OS hostname to eureka server
 #  instance:
 #    prefer-ip-address: true
